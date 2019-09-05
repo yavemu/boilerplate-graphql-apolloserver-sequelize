@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "password",
+    "database": "api_demo_graphql_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {},
+  "test": {}
+}

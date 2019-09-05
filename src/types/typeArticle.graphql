@@ -1,0 +1,25 @@
+type Article {
+  id:ID!
+  title:String!
+  body:String!
+  published:Boolean!
+  authorId: ID!
+  createdAt: String!
+  updatedAt:String!
+  #Asociación de uno a muchos
+  tags:[Tag!]
+  #Asociación de uno a uno
+  author:User!
+}
+
+type Query {
+  allArticle:[Article!]
+}
+
+type Mutation {
+  newArticle(title:String!,body:String!,authorId:ID!,tags:[Tagsinput]):Article!
+}
+
+input Tagsinput {
+  name:String!
+}

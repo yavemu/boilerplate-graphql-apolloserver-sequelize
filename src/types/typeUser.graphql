@@ -1,0 +1,22 @@
+type User {
+  id:ID!
+  username:String!
+  email:String!
+  createdAt: String!
+  updatedAt:String!
+  #Asociación de uno a muchos
+  articles:[Article!]
+}
+
+type AuthPayload {
+  token:String!
+}
+
+type Query {
+  allUser:[User!]
+}
+
+type Mutation {
+  signup(username:String!, email:String!, password:String!):User!
+  login(email:String!,password:String!):AuthPayload!
+}
